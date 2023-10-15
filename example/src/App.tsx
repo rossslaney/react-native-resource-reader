@@ -1,13 +1,18 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-resource-reader';
+import { getResourceValue } from 'react-native-resource-reader';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<string | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    const getVal = async () => {
+      const val: string = await getResourceValue('ABOUT_US');
+      console.log(val);
+      setResult(val);
+    };
+    getVal();
   }, []);
 
   return (

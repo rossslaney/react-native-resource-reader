@@ -11,11 +11,12 @@ npm install react-native-resource-reader
 ## Usage
 
 ```js
-import { multiply } from 'react-native-resource-reader';
+import { getResourceValue } from 'react-native-resource-reader';
 
 // ...
 
-const result = await multiply(3, 7);
+const value = await getResourceValue('YOUR_RESOURCE_KEY');
+console.log(value); // This will print the value associated with 'YOUR_RESOURCE_KEY' in either `info.plist` or `strings.xml`
 ```
 
 ## Contributing

@@ -17,6 +17,6 @@ const ResourceReader = NativeModules.ResourceReader
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return ResourceReader.multiply(a, b);
+export function getResourceValue(key: string): Promise<string> {
+  return ResourceReader.getResourceValue(key);
 }

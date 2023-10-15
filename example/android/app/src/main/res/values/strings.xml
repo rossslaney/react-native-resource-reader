@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ResourceReaderExample</string>
+    <string name="ABOUT_US">This is an example string that is gathered from the app resources.</string>
 </resources>
